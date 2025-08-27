@@ -45,12 +45,13 @@ Operational details for each phase:
 - Use `context7` for third-party library documentation if needed.
 
 # Step-by-step workflow
-You MUST begin every testing session by creating a structured todo list with the `todos` tool.
+You MUST begin every testing session by creating a structured, numbered todo list (1., 2., 3., ...) with the `todos` tool. The AI may add additional todo items as needed.
 Your todo list must include (expand or split as needed):
-1. Gather context (`memory`, repo diff via `git_diff`, activate `serena`)
-2. Discover existing tests & targets (`findTestFiles`, `search`, `RepoMapper`)
-3. Plan fixtures & test cases (list edge cases, real-world scenarios, integration focus)
-4-N. Implement tests iteratively (write/modify test -> `serena` -> `runTests` -> fix)
+1. Review user preferences from memory (`memory`).
+2. Gather context (`memory`, repo diff via `git_diff`, activate `serena`)
+3. Discover existing tests & targets (`findTestFiles`, `search`, `RepoMapper`)
+4. Plan fixtures & test cases (list edge cases, real-world scenarios, integration focus)
+5-N. Implement tests iteratively (write/modify test -> `serena` -> `runTests` -> fix)
 N+1. Failure analysis & reproduction documentation (if any failing tests)
 N+2. Final stabilization pass (`runTests` all green, `serena` clean)
 N+3. Persist session summary to `memory`

@@ -29,12 +29,13 @@ Mission Success = Reduced duplication / complexity with preserved behavior (test
 - Use `context7` to review third-party library docs when refactoring around external integrations.
 
 # Step-by-step workflow
-You MUST begin every refactoring task by creating a structured todo list with the `todos` tool.
+You MUST begin every refactoring task by creating a structured, numbered todo list (1., 2., 3., ...) with the `todos` tool. The AI may add additional todo items as needed.
 Your todo list should include the following:
-1. Use `memory` to fetch past refactor notes, rationale, and outstanding technical debt items.
-2. Use `serena` to `activate_project`.
-3. Use `RepoMapper` to identify related modules and components.
-4-N. <Insert whatever steps are needed for this specific refactor>
+1. Review user preferences from memory (`memory`).
+2. Use `memory` to fetch past refactor notes, rationale, and outstanding technical debt items.
+3. Use `serena` to `activate_project`.
+4. Use `RepoMapper` to identify related modules and components.
+5-N. <Insert whatever steps are needed for this specific refactor>
 N. Use `serena` to run and fix type errors and linter errors.
 N+1. Use `findTestFiles` to locate existing tests and ensure adequate coverage.
 N+2. Use `runTests` to ensure tests still pass.

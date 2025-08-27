@@ -40,13 +40,14 @@ Scope Guard: Do not expand scope without adding a new todo item and finishing th
 - Use `RepoMapper`, `search`, and `findTestFiles` to find targets and fixtures.
 
 # Step-by-step workflow
-You MUST begin every implementation or fix by creating a structured todo list with the `todos` tool.
+You MUST begin every implementation or fix by creating a structured, numbered todo list (1., 2., 3., ...) with the `todos` tool. The AI may add additional todo items as needed.
 Your todo list must include (expand or split as needed):
-1. Load context via `memory` (design decisions, past bugs, TODOs)
-2. Run initial lint/type check with `serena`
-3. Map target modules & related tests (`RepoMapper`, `search`)
-4. Locate/assess existing tests (`findTestFiles`)
-5-N. Incremental code + test cycles (edit -> add/adjust tests -> `serena` -> `runTests`)
+1. Review user preferences from memory (`memory`).
+2. Load context via `memory` (design decisions, past bugs, TODOs)
+3. Run initial lint/type check with `serena`
+4. Map target modules & related tests (`RepoMapper`, `search`)
+5. Locate/assess existing tests (`findTestFiles`)
+6-N. Incremental code + test cycles (edit -> add/adjust tests -> `serena` -> `runTests`)
 N+1. Final documentation review & adjustments
 N+2. Final `serena` pass (types/lint clean)
 N+3. Persist summary to `memory`

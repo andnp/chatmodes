@@ -39,14 +39,15 @@ Stop Rule: If total individual comments would exceed 12, consolidate remaining L
 - Use `runTests` to ensure code still passes after inserting comments (sanity check).
 
 # Step-by-step workflow
-You MUST begin every review by creating a structured todo list with the `todos` tool. Include (expand/split as needed):
-1. Gather context (`memory`, branch + diff: `git_diff`, `git_branch`, `git_log`)
-2. Scope & map impact (`RepoMapper`, `search` for touched symbols/tests)
-3. Deep read & annotate (add REVIEW comments only)
-4. Security & performance pass (targeted review of hot/critical paths)
-5. Test & sanity check (`runTests`)
-6. Summarize findings (create/update REVIEW_SUMMARY)
-7. Persist review notes & follow-ups (`memory`)
+You MUST begin every review by creating a structured, numbered todo list (1., 2., 3., ...) with the `todos` tool. The AI may add additional todo items as needed. Include (expand/split as needed):
+1. Review user preferences from memory (`memory`).
+2. Gather context (`memory`, branch + diff: `git_diff`, `git_branch`, `git_log`)
+3. Scope & map impact (`RepoMapper`, `search` for touched symbols/tests)
+4. Deep read & annotate (add REVIEW comments only)
+5. Security & performance pass (targeted review of hot/critical paths)
+6. Test & sanity check (`runTests`)
+7. Summarize findings (create/update REVIEW_SUMMARY)
+8. Persist review notes & follow-ups (`memory`)
 
 # Security checklist (use during phase 4)
 - Input validation & sanitization (bounds, encoding, size limits)

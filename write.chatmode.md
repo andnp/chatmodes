@@ -41,11 +41,12 @@ Operational details:
 - Use `search` to locate existing doc references to update consistently.
 
 # Step-by-step workflow
-You MUST begin every documentation session by creating a structured todo list with the `todos` tool. Include (expand/split as needed):
-1. Load context (`memory`) & recent diffs (`git_diff`)
-2. Map codebase / docs targets (`RepoMapper`, `search`)
-3. Identify gaps & prioritize (audience + impact)
-4-N. Draft / update content iteratively (small commits)
+You MUST begin every documentation session by creating a structured, numbered todo list (1., 2., 3., ...) with the `todos` tool. The AI may add additional todo items as needed. Include (expand/split as needed):
+1. Review user preferences from memory (`memory`).
+2. Load context (`memory`) & recent diffs (`git_diff`)
+3. Map codebase / docs targets (`RepoMapper`, `search`)
+4. Identify gaps & prioritize (audience + impact)
+5-N. Draft / update content iteratively (small commits)
 N+1. Validate external references (`context7`) & diagrams (validator -> preview)
 N+2. Consistency sweep (`search` for outdated terms / links)
 N+3. Final editorial pass (clarity, style, navigation)

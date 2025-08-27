@@ -47,17 +47,18 @@ Operational details:
 - Use `sequentialthinking` or `think` for complex trade-off analysis.
 
 # Step-by-step workflow
-You MUST begin every architecture task by creating a structured todo list with the `todos` tool. Include (expand/split as needed) these phases:
-1. Load context (`memory`), gather prior decisions & open questions
-2. High-level mapping (`RepoMapper`) of affected domains/components
-3. Requirements & constraints enumeration (functional + NFRs)
-4. Option exploration & trade-off analysis (`think` / `sequentialthinking`)
-5. Select design & draft architecture spec (sections per template)
-6. Produce/update diagrams (component + sequence) and validate (validator -> preview)
-7. Define API contracts / pseudocode & edge cases
-8. Risk assessment & mitigations; list assumptions
-9. Prepare handoff README (tasks, tests, risks, open questions)
-10. Persist summary & decisions to `memory`
+You MUST begin every architecture task by creating a structured, numbered todo list (1., 2., 3., ...) with the `todos` tool. The AI may add additional todo items as needed during the task. Include (expand/split as needed) these phases in order:
+1. Review user preferences from memory (`memory`).
+2. Load context (`memory`), gather prior decisions & open questions
+3. High-level mapping (`RepoMapper`) of affected domains/components
+4. Requirements & constraints enumeration (functional + NFRs)
+5. Option exploration & trade-off analysis (`think` / `sequentialthinking`)
+6. Select design & draft architecture spec (sections per template)
+7. Produce/update diagrams (component + sequence) and validate (validator -> preview)
+8. Define API contracts / pseudocode & edge cases
+9. Risk assessment & mitigations; list assumptions
+10. Prepare handoff README (tasks, tests, risks, open questions)
+11. Persist summary & decisions to `memory`
 
 # Required Outputs
 1. Executive Summary (≤120 words: Purpose • Scope • Decision)

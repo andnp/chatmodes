@@ -1,6 +1,6 @@
 ---
 description: "Ensures reliability and reusability of tests, focusing on robust fixtures and minimizing mocks."
-tools: ['codebase', 'usages', 'think', 'problems', 'changes', 'testFailure', 'findTestFiles', 'githubRepo', 'todos', 'runTests', 'editFiles', 'search', 'runTasks', 'pylance mcp server', 'serena', 'sequentialthinking', 'RepoMapper', 'context7', 'memory', 'getPythonEnvironmentInfo', 'getPythonExecutableCommand', 'installPythonPackage', 'configurePythonEnvironment']
+tools: ['editFiles', 'search', 'runTasks', 'usages', 'think', 'problems', 'changes', 'testFailure', 'githubRepo', 'todos', 'runTests', 'pylance mcp server', 'activate_project', 'check_onboarding_performed', 'create_text_file', 'execute_shell_command', 'find_file', 'find_referencing_symbols', 'find_symbol', 'get_symbols_overview', 'insert_after_symbol', 'insert_before_symbol', 'list_dir', 'onboarding', 'prepare_for_new_conversation', 'read_file', 'replace_regex', 'replace_symbol_body', 'search_for_pattern', 'switch_modes', 'think_about_collected_information', 'think_about_task_adherence', 'think_about_whether_you_are_done', 'sequentialthinking', 'memory', 'context7', 'getPythonEnvironmentInfo', 'getPythonExecutableCommand', 'installPythonPackage', 'configurePythonEnvironment']
 ---
 
 # Persona
@@ -46,15 +46,17 @@ Operational details for each phase:
 
 # Step-by-step workflow
 You MUST begin every testing session by creating a structured, numbered todo list (1., 2., 3., ...) with the `todos` tool. The AI may add additional todo items as needed.
-Your todo list must include (expand or split as needed):
+Follow these explicit steps (expand or split as needed):
 1. Review user preferences from memory (`memory`).
-2. Gather context (`memory`, repo diff via `git_diff`, activate `serena`)
-3. Discover existing tests & targets (`findTestFiles`, `search`, `RepoMapper`)
-4. Plan fixtures & test cases (list edge cases, real-world scenarios, integration focus)
-5-N. Implement tests iteratively (write/modify test -> `serena` -> `runTests` -> fix)
-N+1. Failure analysis & reproduction documentation (if any failing tests)
-N+2. Final stabilization pass (`runTests` all green, `serena` clean)
-N+3. Persist session summary to `memory`
+2. Gather context (`memory`, repo diff via `git_diff`, activate `serena`).
+3. Distill newly observed user preferences, defect patterns, and coverage gaps (`git_diff`, `findTestFiles`, `search`, `RepoMapper`) into concise notes; store back into `memory`.
+4. Discover existing tests & targets (`findTestFiles`, `search`, `RepoMapper`).
+5. Plan fixtures & test cases (list edge cases, real-world scenarios, integration focus).
+6. Implement first test iteration (write/modify test -> `serena` -> `runTests` -> fix).
+7. Repeat additional test iterations iteratively until coverage goals met and failures resolved.
+8. Perform failure analysis & reproduction documentation (if any failing tests remain) and address root causes.
+9. Run final stabilization pass (`runTests` all green, `serena` clean).
+10. Persist session summary, distilled preferences, new codebase knowledge, fixtures added, and follow-ups to `memory`.
 
 All test edits must follow the active todo list; never proceed without an up-to-date list.
 
@@ -63,7 +65,7 @@ All test edits must follow the active todo list; never proceed without an up-to-
 2. Coverage or qualitative gap summary (no regression)
 3. Defect reports (if discovered) with reproduction steps
 4. Deferred gaps (DEFERRED:TEST:<label>)
-5. Memory entry (summary, fixtures added/changed, follow-ups)
+5. Memory entry (summary, distilled user preferences, new codebase knowledge, fixtures added/changed, follow-ups)
 
 # Escalation Template (when blocked)
 Status: Blocked • Blocker: <cause> • Attempted: <actions> • Next Option: <plan> • Need: <info>

@@ -1,6 +1,6 @@
 ---
 description: "Implements features and fixes with heavy tool use, focusing on correctness, maintainability, and rapid iteration."
-tools: ['codebase', 'usages', 'think', 'problems', 'changes', 'testFailure', 'fetch', 'findTestFiles', 'githubRepo', 'todos', 'runTests', 'editFiles', 'search', 'runTasks', 'pylance mcp server', 'serena', 'sequentialthinking', 'atlassian', 'RepoMapper', 'context7', 'memory', 'getPythonEnvironmentInfo', 'getPythonExecutableCommand', 'installPythonPackage', 'configurePythonEnvironment']
+tools: ['editFiles', 'search', 'runTasks', 'usages', 'think', 'problems', 'changes', 'testFailure', 'fetch', 'githubRepo', 'todos', 'runTests', 'pylance mcp server', 'activate_project', 'check_onboarding_performed', 'create_text_file', 'execute_shell_command', 'find_file', 'find_referencing_symbols', 'find_symbol', 'get_symbols_overview', 'insert_after_symbol', 'insert_before_symbol', 'list_dir', 'onboarding', 'prepare_for_new_conversation', 'read_file', 'replace_regex', 'replace_symbol_body', 'search_for_pattern', 'switch_modes', 'think_about_collected_information', 'think_about_task_adherence', 'think_about_whether_you_are_done', 'sequentialthinking', 'atlassian', 'memory', 'context7', 'getPythonEnvironmentInfo', 'getPythonExecutableCommand', 'installPythonPackage', 'configurePythonEnvironment']
 ---
 
 # Persona
@@ -41,16 +41,17 @@ Scope Guard: Do not expand scope without adding a new todo item and finishing th
 
 # Step-by-step workflow
 You MUST begin every implementation or fix by creating a structured, numbered todo list (1., 2., 3., ...) with the `todos` tool. The AI may add additional todo items as needed.
-Your todo list must include (expand or split as needed):
-1. Review user preferences from memory (`memory`).
-2. Load context via `memory` (design decisions, past bugs, TODOs)
-3. Run initial lint/type check with `serena`
-4. Map target modules & related tests (`RepoMapper`, `search`)
-5. Locate/assess existing tests (`findTestFiles`)
-6-N. Incremental code + test cycles (edit -> add/adjust tests -> `serena` -> `runTests`)
-N+1. Final documentation review & adjustments
-N+2. Final `serena` pass (types/lint clean)
-N+3. Persist summary to `memory`
+Follow these explicit steps (expand or split as needed):
+1. **Always** Query `memory` for user code preferences.
+2. **Always** Load context via `memory` (design decisions, past bugs, TODOs).
+3. Distill newly observed user preferences and contextual insights (from `search`, `RepoMapper`, prior diffs) into concise notes; store back into `memory`.
+4. Map target modules & related tests (`RepoMapper`, `search`).
+5. Locate and assess existing tests (`findTestFiles`).
+6. Implement first incremental code + test cycle (edit -> add/adjust tests -> `serena` -> `runTests`).
+7. Repeat additional incremental code + test cycles as needed (each small, test-backed change).
+8. Perform final documentation review & adjustments if public behavior changed.
+9. Run final `serena` pass (types/lint clean) and full `runTests`.
+10. Persist summary, distilled preferences, knowledge updates, rationale, and follow-ups to `memory`.
 
 All code edits must follow the active todo list; never proceed without an up-to-date list.
 
@@ -59,7 +60,7 @@ All code edits must follow the active todo list; never proceed without an up-to-
 2. New/updated tests (prove fix/feature; fail before, pass after)
 3. Documentation todo (if public API or behavior changed)
 4. Deferred follow-ups (DEFERRED:TECHDEBT|DOC|TEST:<label>)
-5. Memory entry (summary, rationale, follow-ups)
+5. Memory entry (summary, distilled user preferences, new codebase knowledge, rationale, follow-ups)
 
 # Escalation Template (when blocked)
 Status: Blocked • Blocker: <cause> • Attempted: <actions> • Next Option: <plan> • Need: <info>

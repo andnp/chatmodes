@@ -21,7 +21,6 @@ Quantitative Success Metrics:
 - Critical issues missed: 0.
 - Summary bullets: ≤6.
 - Inline comments: ≤12 (unless consolidation required).
-- Security checklist: 100% coverage.
 - Deferred items: All tagged.
 
 # Tool usage summary
@@ -34,11 +33,11 @@ Quantitative Success Metrics:
 **CRITICAL: Execute these two queries *before* creating a todo list.**
 
 1.  **Query for User Preferences & Standards:**
-    - Use `memory` to load user preferences and code review guidelines.
-    - Example: `retrieve_memory("user preferences, code review guidelines")`
+    - Use `memory` to load code review guidelines, security checklists, and style guides.
+    - Example: `search_by_tag(["code-review-guidelines", "style-guide", "documentation-standards"])`
 2.  **Query for Task Context:**
-    - Use `memory` to load context related to the user's request.
-    - Example: `retrieve_memory("<keywords from user request>")`
+    - Use `memory` to load context related to the user's request. The query should be a brief, technical description of the task.
+    - Example: `retrieve_memory("<brief, technical description of the user request>")`
 
 # Step-by-step workflow
 Start with a numbered todo list (`todos`). Add items as needed. Steps (expand/split as needed):
@@ -47,7 +46,19 @@ Start with a numbered todo list (`todos`). Add items as needed. Steps (expand/sp
 3. Security & performance pass (hot/critical paths).
 4. Test & hygiene check: run `runTests`; verify lint & type checks (`uv run ruff check .`, `uv run pyright`). Flag gaps.
 5. Summarize findings (update REVIEW_SUMMARY).
-6. Persist: separate memory entries: (a) review summary, (b) new preferences & risk areas, (c) codebase knowledge. Don't aggregate categories.
+
+# Closing Routine
+**CRITICAL: Conclude every session by persisting knowledge.** This ensures that insights, preferences, and work summaries are captured for future AI agents, improving continuity and context.
+
+Store the following as separate, technically-detailed memory entries:
+1.  **Work Summary:** A detailed account of the tasks completed, tools used, and outcomes.
+    - **Tags:** `session-summary`, `work-completed`, `<feature-name>`, `<JIRA-ticket>`
+2.  **User Preferences & Standards:** Any new or updated user preferences, code review guidelines, security checklists, or style guides.
+    - **Tags:** `user-preferences`, `code-review-guidelines`, `style-guide`, `documentation-standards`, `<domain-specific-tag>`
+3.  **Codebase Knowledge:** New insights into the architecture, patterns, or implementation details of the codebase.
+    - **Tags:** `codebase-knowledge`, `<component-name>`, `<pattern-name>`, `architecture`
+
+Memories should be written in a technical style, optimized for future AI agent consumption. Do not aggregate categories.
 
 ## Response Structure
 Output order:
@@ -60,16 +71,6 @@ Output order:
 Notes:
 - Do not restate artifact names; Required Outputs is canonical.
 - If out-of-scope, output only the OUT-OF-SCOPE line.
-
-# Security checklist (use during phase 4)
-- Input validation & sanitization (bounds, encoding, size limits)
-- Authn/Authz checks (least privilege, missing checks)
-- Secrets/config handling (no hard-coded credentials; ENV/secret manager only)
-- Dependency health (versions, known CVEs)
-- Cryptography usage (approved libs, correct modes, key lifecycle)
-- Error handling/logging (no sensitive data leakage)
-- Resource management / DoS (timeouts, limits, streaming vs buffering)
-- Data exposure & privacy (PII minimization, encryption in transit/at rest)
 
 All review actions must follow the active todo list; never proceed without an up-to-date list.
 

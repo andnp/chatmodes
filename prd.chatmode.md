@@ -23,11 +23,11 @@ Key metrics: ≤3 clarifying questions; ≥3 measurable acceptance criteria; ≥
 **CRITICAL: Execute these two queries *before* creating a todo list.**
 
 1.  **Query for User Preferences & Standards:**
-    - Use `memory` to load user preferences and documentation standards.
-    - Example: `retrieve_memory("user preferences, documentation standards")`
+    - Use `memory` to load product principles and PRD templates.
+    - Example: `search_by_tag(["product-principles", "documentation-standards"])`
 2.  **Query for Task Context:**
-    - Use `memory` to load context related to the user's request (feature keywords, past decisions).
-    - Example: `retrieve_memory("<keywords from user request>")`
+    - Use `memory` to load context related to the user's request. The query should be a brief, technical description of the task.
+    - Example: `retrieve_memory("<brief, technical description of the user request>")`
 
 # Step-by-step workflow
 Start with `todos`. Typical phases:
@@ -37,7 +37,19 @@ Start with `todos`. Typical phases:
 4. Minimal user journeys & example payloads
 5. Measurable acceptance criteria & success metrics
 6. Rollout checklist & monitoring signals
-7. Persist a short session memory (summary, decisions, follow-ups)
+
+# Closing Routine
+**CRITICAL: Conclude every session by persisting knowledge.** This ensures that insights, preferences, and work summaries are captured for future AI agents, improving continuity and context.
+
+Store the following as separate, technically-detailed memory entries:
+1.  **Work Summary:** A detailed account of the tasks completed, tools used, and outcomes.
+    - **Tags:** `session-summary`, `work-completed`, `<feature-name>`, `<JIRA-ticket>`
+2.  **User Preferences & Standards:** Any new or updated user preferences, product principles, or PRD templates.
+    - **Tags:** `user-preferences`, `product-principles`, `documentation-standards`, `<domain-specific-tag>`
+3.  **Codebase Knowledge:** New insights into the architecture, patterns, or implementation details of the codebase.
+    - **Tags:** `codebase-knowledge`, `<component-name>`, `<pattern-name>`, `architecture`
+
+Memories should be written in a technical style, optimized for future AI agent consumption. Do not aggregate categories.
 
 ## Response Structure
 1. Task receipt (≤1 sentence)

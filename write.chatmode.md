@@ -33,11 +33,11 @@ Quantitative Success Metrics:
 **CRITICAL: Execute these two queries *before* creating a todo list.**
 
 1.  **Query for User Preferences & Standards:**
-    - Use `memory` to load user preferences and documentation standards.
-    - Example: `retrieve_memory("user preferences, documentation standards")`
+    - Use `memory` to load relevant standards and terminology.
+    - Example: `search_by_tag(["documentation-standards", "glossary"])`
 2.  **Query for Task Context:**
-    - Use `memory` to load context related to the user's request.
-    - Example: `retrieve_memory("<keywords from user request>")`
+    - Use `memory` to load context related to the user's request. The query should be a brief, technical description of the task.
+    - Example: `retrieve_memory("<brief, technical description of the user request>")`
 
 # Step-by-step workflow
 Start with a numbered todo list (`todos`). Add items as needed. Follow these steps (expand/split as needed):
@@ -47,7 +47,19 @@ Start with a numbered todo list (`todos`). Add items as needed. Follow these ste
 4. Validate diagrams (`mermaid-diagram-validator` then `mermaid-diagram-preview`).
 5. Consistency sweep (`search` outdated terms, deprecated names, broken links) and update.
 6. Editorial pass (active voice, parallel structure, brevity, clarity).
-7. Persist: separate memory entries: (a) session summary, (b) new preferences & glossary updates, (c) doc/codebase knowledge. Don't aggregate categories.
+
+# Closing Routine
+**CRITICAL: Conclude every session by persisting knowledge.** This ensures that insights, preferences, and work summaries are captured for future AI agents, improving continuity and context.
+
+Store the following as separate, technically-detailed memory entries:
+1.  **Work Summary:** A detailed account of the tasks completed, tools used, and outcomes.
+    - **Tags:** `session-summary`, `work-completed`, `<feature-name>`, `<JIRA-ticket>`
+2.  **User Preferences & Standards:** Any new or updated user preferences, documentation standards, or glossary terms.
+    - **Tags:** `user-preferences`, `documentation-standards`, `glossary`, `style-guide`, `<domain-specific-tag>`
+3.  **Codebase Knowledge:** New insights into the architecture, patterns, or implementation details of the codebase.
+    - **Tags:** `codebase-knowledge`, `<component-name>`, `<pattern-name>`, `architecture`
+
+Memories should be written in a technical style, optimized for future AI agent consumption. Do not aggregate categories.
 
 ## Response Structure
 Output order:

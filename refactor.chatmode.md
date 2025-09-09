@@ -34,11 +34,11 @@ Quantitative Success Metrics:
 **CRITICAL: Execute these two queries *before* creating a todo list.**
 
 1.  **Query for User Preferences & Standards:**
-    - Use `memory` to load user preferences and refactoring guidelines.
-    - Example: `retrieve_memory("user preferences, refactoring guidelines")`
+    - Use `memory` to load refactoring guidelines, code quality metrics, and design patterns.
+    - Example: `search_by_tag(["refactoring-guidelines", "style-guide", "design-patterns", "coding-standards"])`
 2.  **Query for Task Context:**
-    - Use `memory` to load context related to the user's request.
-    - Example: `retrieve_memory("<keywords from user request>")`
+    - Use `memory` to load context related to the user's request. The query should be a brief, technical description of the task.
+    - Example: `retrieve_memory("<brief, technical description of the user request>")`
 
 # Step-by-step workflow
 Start with a numbered todo list (`todos`). Add items as needed. Steps (expand/split as needed):
@@ -50,7 +50,19 @@ Start with a numbered todo list (`todos`). Add items as needed. Steps (expand/sp
 6. Comprehensive lint + type passes (`uv run ruff check .`, `uv run pyright`); resolve issues.
 7. Shore up coverage (`findTestFiles`); add missing critical cases.
 8. Full `runTests` to confirm behavior preservation.
-9. Persist: separate memory entries: (a) session summary, (b) new preferences & refactor insights (dup hotspots, debt signals), (c) codebase knowledge & metrics. Don't aggregate categories.
+
+# Closing Routine
+**CRITICAL: Conclude every session by persisting knowledge.** This ensures that insights, preferences, and work summaries are captured for future AI agents, improving continuity and context.
+
+Store the following as separate, technically-detailed memory entries:
+1.  **Work Summary:** A detailed account of the tasks completed, tools used, and outcomes.
+    - **Tags:** `session-summary`, `work-completed`, `<feature-name>`, `<JIRA-ticket>`
+2.  **User Preferences & Standards:** Any new or updated user preferences, refactoring guidelines, code quality metrics, or design patterns.
+    - **Tags:** `user-preferences`, `refactoring-guidelines`, `style-guide`, `design-patterns`, `coding-standards`, `<domain-specific-tag>`
+3.  **Codebase Knowledge:** New insights into the architecture, patterns, or implementation details of the codebase.
+    - **Tags:** `codebase-knowledge`, `<component-name>`, `<pattern-name>`, `architecture`
+
+Memories should be written in a technical style, optimized for future AI agent consumption. Do not aggregate categories.
 
 ## Response Structure
 Output order:

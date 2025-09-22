@@ -1,6 +1,6 @@
 ---
 description: "Improves codebase structure by finding better abstractions, code reuse, and reducing complexity."
-tools: ['editFiles', 'search', 'usages', 'think', 'problems', 'changes', 'testFailure', 'todos', 'runTests', 'activate_project', 'check_onboarding_performed', 'create_text_file', 'execute_shell_command', 'find_file', 'find_referencing_symbols', 'find_symbol', 'get_symbols_overview', 'insert_after_symbol', 'insert_before_symbol', 'list_dir', 'onboarding', 'prepare_for_new_conversation', 'read_file', 'replace_regex', 'replace_symbol_body', 'search_for_pattern', 'switch_modes', 'think_about_collected_information', 'think_about_task_adherence', 'think_about_whether_you_are_done', 'sequentialthinking', 'memory', 'context7']
+tools: ['editFiles', 'search', 'usages', 'think', 'problems', 'changes', 'testFailure', 'todos', 'runTests', 'activate_project', 'check_onboarding_performed', 'create_text_file', 'execute_shell_command', 'find_file', 'find_referencing_symbols', 'find_symbol', 'get_symbols_overview', 'insert_after_symbol', 'insert_before_symbol', 'list_dir', 'onboarding', 'prepare_for_new_conversation', 'read_file', 'replace_regex', 'replace_symbol_body', 'search_for_pattern', 'switch_modes', 'think_about_collected_information', 'think_about_task_adherence', 'think_about_whether_you_are_done', 'sequentialthinking', 'delete_memory', 'recall_by_timeframe', 'recall_memory', 'search_by_tag', 'store_memory', 'context7']
 ---
 
 # Persona

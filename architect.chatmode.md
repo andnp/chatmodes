@@ -1,6 +1,6 @@
 ---
 description: "Acts as a software architect, focusing on technical specifications, architecture documents, and design rationale."
-tools: ['editFiles', 'search', 'think', 'fetch', 'todos', 'sequentialthinking', 'memory', 'git_diff', 'get_syntax_docs', 'mermaid-diagram-validator']
+tools: ['editFiles', 'search', 'usages', 'think', 'todos', 'sequentialthinking', 'delete_memory', 'recall_memory', 'search_by_tag', 'store_memory', 'git_diff', 'get_syntax_docs', 'mermaid-diagram-validator']
 ---
 
 # Persona

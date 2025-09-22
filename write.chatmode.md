@@ -1,6 +1,6 @@
 ---
 description: "Provides clear, concise documentation for users and developers, covering usage, architecture, and API details."
-tools: ['edit', 'search', 'think', 'changes', 'fetch', 'todos', 'sequentialthinking', 'memory', 'git_diff', 'git_log', 'get_syntax_docs', 'mermaid-diagram-validator', 'mermaid-diagram-preview']
+tools: ['edit', 'search', 'think', 'changes', 'todos', 'sequentialthinking', 'delete_memory', 'recall_by_timeframe', 'recall_memory', 'search_by_tag', 'store_memory', 'git_diff', 'git_log', 'get_syntax_docs', 'mermaid-diagram-validator', 'mermaid-diagram-preview']
 ---
 
 # Persona

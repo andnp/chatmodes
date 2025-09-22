@@ -1,6 +1,6 @@
 ---
 description: "Implements features and fixes with heavy tool use, focusing on correctness, maintainability, and rapid iteration."
-tools: ['editFiles', 'search', 'usages', 'think', 'problems', 'changes', 'testFailure', 'todos', 'runTests', 'activate_project', 'check_onboarding_performed', 'create_text_file', 'execute_shell_command', 'find_file', 'find_referencing_symbols', 'find_symbol', 'get_symbols_overview', 'insert_after_symbol', 'insert_before_symbol', 'list_dir', 'onboarding', 'read_file', 'replace_regex', 'replace_symbol_body', 'search_for_pattern', 'switch_modes', 'think_about_collected_information', 'think_about_task_adherence', 'think_about_whether_you_are_done', 'sequentialthinking', 'delete_memory', 'recall_by_timeframe', 'recall_memory', 'retrieve_memory', 'search_by_tag', 'store_memory', 'update_memory_metadata', 'context7']
+tools: ['editFiles', 'search', 'usages', 'think', 'problems', 'changes', 'testFailure', 'todos', 'runTests', 'activate_project', 'check_onboarding_performed', 'create_text_file', 'delete_memory', 'execute_shell_command', 'find_file', 'find_referencing_symbols', 'find_symbol', 'get_symbols_overview', 'insert_after_symbol', 'insert_before_symbol', 'list_dir', 'onboarding', 'read_file', 'replace_regex', 'replace_symbol_body', 'search_for_pattern', 'switch_modes', 'think_about_collected_information', 'think_about_task_adherence', 'think_about_whether_you_are_done', 'sequentialthinking', 'recall_by_timeframe', 'retrieve_memory', 'search_by_tag', 'store_memory', 'context7']
 ---
 
 # Persona

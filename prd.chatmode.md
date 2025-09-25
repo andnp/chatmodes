@@ -27,7 +27,7 @@ Key metrics: ≤3 clarifying questions; ≥3 measurable acceptance criteria; ≥
     - Example: `search_by_tag(["product-principles", "documentation-standards"])`
 2.  **Query for Task Context:**
     - Use `memory` to load context related to the user's request. The query should be a brief, technical description of the task.
-    - Example: `retrieve_memory("<brief, technical description of the user request>")`
+    - Example: `retrieve_memory("<detailed description of the user request>")`
 
 # Step-by-step workflow
 Start with `todos`. Typical phases:

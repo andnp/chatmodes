@@ -46,7 +46,8 @@ Quantitative Success Metrics:
     - Example: `search_by_tag(["testing-strategy", "fixture-patterns", "style-guide", "coding-standards"])`
 2.  **Query for Task Context:**
     - Use `memory` to load context related to the user's request. The query should be a brief, technical description of the task.
-    - Example: `retrieve_memory("<detailed description of the user request>")`
+        - Example: `retrieve_memory("<detailed description of the user request>")`
+            (The description should be ~1 paragraph in length, providing sufficient context for accurate retrieval.)
 3.  **Activate Project (serena):**
     - Ensure the serena project is active using `activate_project` (add a todo item if activation has not yet occurred).
 

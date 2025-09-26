@@ -36,7 +36,8 @@ Quantitative Success Metrics:
     - Example: `search_by_tag(["documentation-standards", "glossary"])`
 2.  **Query for Task Context:**
     - Use `memory` to load context related to the user's request. The query should be a brief, technical description of the task.
-    - Example: `retrieve_memory("<detailed description of the user request>")`
+        - Example: `retrieve_memory("<detailed description of the user request>")`
+            (The description should be ~1 paragraph in length, providing sufficient context for accurate retrieval.)
 
 # Step-by-step workflow
 Start with a numbered todo list (`todos`). Add items as needed. Follow these steps (expand/split as needed):

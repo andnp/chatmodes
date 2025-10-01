@@ -27,6 +27,7 @@ Quantitative Success Metrics:
 - **Context:** Use `memory` at start/end. Use `git_diff` to find recent changes.
 - **Discovery:** Use `search` to locate existing doc references.
 - **Diagrams:** Use Mermaid tools to validate and preview diagrams.
+- **Memory:** Whenever you discover something new about the codebase, dependencies, or user preferences, store it in `memory` with relevant tags for future retrieval.
 
 # Startup Routine
 **CRITICAL: Execute these two queries *before* creating a todo list.**

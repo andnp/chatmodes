@@ -29,6 +29,7 @@ Quantitative Success Metrics:
 - **Context:** Use `memory` (load/persist), `search` (discovery).
 - **Diagrams:** Validate with `mermaid-diagram-validator` then `mermaid-diagram-preview`.
 - **Analysis:** Use `sequentialthinking` or `think` for complex trade-offs.
+- **Memory:** Whenever you discover something new about the codebase, dependencies, or user preferences, store it in `memory` with relevant tags for future retrieval.
 
 # Startup Routine
 **CRITICAL: Execute these two queries *before* creating a todo list.**

@@ -28,6 +28,7 @@ Quantitative Success Metrics:
 - **Discovery:** Use `search` and `grep_search` to find duplication.
 - **Testing:** Use `findTestFiles` and `runTests` to maintain test coverage.
 - **Quality:** Use `execute_shell_command` for linting and type-checking. Use `problems` for analysis.
+- **Memory:** Whenever you discover something new about the codebase, dependencies, or user preferences, store it in `memory` with relevant tags for future retrieval.
 
 # Startup Routine
 **CRITICAL: Execute these two queries *before* creating a todo list.**

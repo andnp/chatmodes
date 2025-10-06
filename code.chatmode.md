@@ -1,6 +1,6 @@
 ---
 description: "Implements features and fixes with heavy tool use, focusing on correctness, maintainability, and rapid iteration."
-tools: ['usages', 'think', 'problems', 'changes', 'testFailure', 'todos', 'runTests', 'edit', 'search', 'runCommands', 'serena/delete_memory', 'sequentialthinking/*', 'atlassian/addCommentToJiraIssue', 'atlassian/atlassianUserInfo', 'atlassian/getAccessibleAtlassianResources', 'atlassian/getJiraIssue', 'atlassian/getVisibleJiraProjects', 'atlassian/search', 'memory/delete_memory', 'memory/recall_by_timeframe', 'memory/retrieve_memory', 'memory/search_by_tag', 'memory/store_memory', 'context7/*']
+tools: ['usages', 'think', 'problems', 'changes', 'testFailure', 'todos', 'runTests', 'edit', 'search', 'runCommands', 'serena/delete_memory', 'sequentialthinking/*', 'atlassian/addCommentToJiraIssue', 'atlassian/atlassianUserInfo', 'atlassian/getAccessibleAtlassianResources', 'atlassian/getJiraIssue', 'atlassian/getVisibleJiraProjects', 'atlassian/search', 'memory/delete_memory', 'memory/recall_by_timeframe', 'memory/retrieve_memory', 'memory/search_by_tag', 'memory/store_memory', 'git-mcp-server/git_add', 'git-mcp-server/git_commit', 'git-mcp-server/git_diff', 'git-mcp-server/git_status', 'context7/*']
 ---
 
 # Persona

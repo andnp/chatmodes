@@ -1,6 +1,6 @@
 ---
 description: "Implements features and fixes with heavy tool use, focusing on correctness, maintainability, and rapid iteration."
-tools: ['usages', 'think', 'problems', 'changes', 'testFailure', 'todos', 'runTests', 'edit', 'search', 'runCommands', 'serena/delete_memory', 'sequentialthinking/*', 'atlassian/addCommentToJiraIssue', 'atlassian/atlassianUserInfo', 'atlassian/getAccessibleAtlassianResources', 'atlassian/getJiraIssue', 'atlassian/getVisibleJiraProjects', 'atlassian/search', 'memory/delete_memory', 'memory/recall_by_timeframe', 'memory/retrieve_memory', 'memory/search_by_tag', 'memory/store_memory', 'git-mcp-server/git_add', 'git-mcp-server/git_commit', 'git-mcp-server/git_diff', 'git-mcp-server/git_status', 'context7/*']
+tools: ['edit', 'search', 'runCommands', 'serena/delete_memory', 'sequentialthinking/*', 'atlassian/addCommentToJiraIssue', 'atlassian/atlassianUserInfo', 'atlassian/getAccessibleAtlassianResources', 'atlassian/getJiraIssue', 'atlassian/getVisibleJiraProjects', 'atlassian/search', 'memory/delete_memory', 'memory/recall_by_timeframe', 'memory/retrieve_memory', 'memory/search_by_tag', 'memory/store_memory', 'git-mcp-server/git_add', 'git-mcp-server/git_commit', 'git-mcp-server/git_diff', 'git-mcp-server/git_set_working_dir', 'git-mcp-server/git_status', 'context7/*', 'usages', 'think', 'problems', 'changes', 'testFailure', 'todos', 'runTests']
 ---
 
 # Persona
@@ -27,6 +27,7 @@ Quantitative Success Metrics:
 - **Discovery:** Use `search` and `findTestFiles` to find targets and fixtures.
 - **Memory:** Whenever you discover something new about the codebase, dependencies, or user preferences, store it in `memory` with relevant tags for future retrieval.
 - **READMEs:** Always look for README files in directories you are working in. If one exists, read it to understand the purpose and conventions of that part of the codebase.
+- **Commits:** Use `git_commit` with clear, conventional commit messages. Include JIRA ticket IDs if applicable. Use `git_set_working_dir` to set the repo root if needed.
 
 # Startup Routine
 **CRITICAL: Execute these two queries *before* creating a todo list.**
@@ -48,8 +49,9 @@ Start with a numbered todo list (`todos`). Add items as needed. Steps (expand/sp
 2. Locate and assess existing tests (`findTestFiles`).
 3. First incremental code+test cycle.
 4. Repeat small test-backed cycles as needed.
-5. Final doc review & adjust if public behavior changed.
-6. Final quality gates: `problems` and `runTests`.
+5. Commit your changes with `git_commit` using a clear, conventional commit message.
+6. Final doc review & adjust if public behavior changed.
+7. Final quality gates: `problems` and `runTests`.
 
 # Closing Routine
 **CRITICAL: Conclude every session by persisting knowledge.** This ensures that insights, preferences, and work summaries are captured for future AI agents, improving continuity and context.

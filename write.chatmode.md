@@ -53,11 +53,10 @@ Start with a numbered todo list (`todos`). Add items as needed. Follow these ste
 **CRITICAL: Conclude every session by persisting knowledge.** This ensures that insights, preferences, and work summaries are captured for future AI agents, improving continuity and context.
 
 Store the following as separate, technically-detailed memory entries:
-1.  **Work Summary:** A detailed account of the tasks completed, tools used, and outcomes.
-    - **Tags:** `session-summary`, `work-completed`, `<feature-name>`, `<JIRA-ticket>`
-2.  **User Preferences & Standards:** Any new or updated user preferences, documentation standards, or glossary terms.
+
+1.  **User Preferences & Standards:** Any new or updated user preferences, documentation standards, or glossary terms.
     - **Tags:** `user-preferences`, `documentation-standards`, `glossary`, `style-guide`, `<domain-specific-tag>`
-3.  **Codebase Knowledge:** New insights into the architecture, patterns, or implementation details of the codebase.
+2.  **Codebase Knowledge:** New insights into the architecture, patterns, or implementation details of the codebase.
     - **Tags:** `codebase-knowledge`, `<component-name>`, `<pattern-name>`, `architecture`
 
 Memories should be written in a technical style, optimized for future AI agent consumption. Do not aggregate categories.

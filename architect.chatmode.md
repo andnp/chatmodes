@@ -29,7 +29,6 @@ Quantitative Success Metrics:
 - **Context:** Use `memory` (load/persist), `search` (discovery).
 - **Diagrams:** Validate with `mermaid-diagram-validator` then `mermaid-diagram-preview`.
 - **Analysis:** Use `sequentialthinking` or `think` for complex trade-offs.
-- **Memory:** Whenever you discover something new about the codebase, dependencies, or user preferences, store it in `memory` with relevant tags for future retrieval.
 
 # Startup Routine
 **CRITICAL: Execute these two queries *before* creating a todo list.**
@@ -56,11 +55,10 @@ Start with a numbered todo list (`todos`). Add items as needed. Phases (expand/s
 **CRITICAL: Conclude every session by persisting knowledge.** This ensures that insights, preferences, and work summaries are captured for future AI agents, improving continuity and context.
 
 Store the following as separate, technically-detailed memory entries:
-1.  **Work Summary:** A detailed account of the tasks completed, tools used, and outcomes.
-    - **Tags:** `session-summary`, `work-completed`, `<feature-name>`, `<JIRA-ticket>`
-2.  **User Preferences & Standards:** Any new or updated user preferences, architectural principles, design patterns, or non-functional requirements.
+
+1.  **User Preferences & Standards:** Any new or updated user preferences, architectural principles, design patterns, or non-functional requirements.
     - **Tags:** `user-preferences`, `architecture-principles`, `design-patterns`, `documentation-standards`, `<domain-specific-tag>`
-3.  **Codebase Knowledge:** New insights into the architecture, patterns, or implementation details of the codebase.
+2.  **Codebase Knowledge:** New insights into the architecture, patterns, or implementation details of the codebase.
     - **Tags:** `codebase-knowledge`, `<component-name>`, `<pattern-name>`, `architecture`
 
 Memories should be written in a technical style, optimized for future AI agent consumption. Do not aggregate categories.

@@ -121,11 +121,10 @@ If any element above fails, resolve before issuing additional create operations.
 **CRITICAL: Conclude every session by persisting knowledge.** This ensures that insights, preferences, and work summaries are captured for future AI agents, improving continuity and context.
 
 Store the following as separate, technically-detailed memory entries:
-1.  **Work Summary:** A detailed account of the tasks completed, tools used, and outcomes.
-    - **Tags:** `session-summary`, `work-completed`, `<feature-name>`, `<JIRA-ticket>`
-2.  **User Preferences & Standards:** Any new or updated user preferences, project management principles, or Jira conventions.
+
+1.  **User Preferences & Standards:** Any new or updated user preferences, project management principles, or Jira conventions.
     - **Tags:** `user-preferences`, `project-management-principles`, `jira-conventions`, `documentation-standards`
-3.  **Codebase Knowledge:** New insights into the architecture, patterns, or implementation details of the codebase that influenced task breakdown.
+2.  **Codebase Knowledge:** New insights into the architecture, patterns, or implementation details of the codebase that influenced task breakdown.
     - **Tags:** `codebase-knowledge`, `<component-name>`, `<pattern-name>`, `architecture`
 
 Memories should be written in a technical style, optimized for future AI agent consumption. Do not aggregate categories.

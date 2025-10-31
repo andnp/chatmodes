@@ -1,6 +1,6 @@
 ---
 description: "Performs code reviews by adding non-functional review comments in code and producing concise recommendations focused on readability, correctness, modularity, security, and performance."
-tools: ['editFiles', 'search', 'usages', 'think', 'changes', 'testFailure', 'fetch', 'todos', 'runTests', 'sequentialthinking', 'memory', 'git_branch', 'git_diff', 'git_log', 'git_show', 'context7']
+tools: ['edit/editFiles', 'search', 'sequentialthinking/*', 'atlassian/fetch', 'atlassian/search', 'memory/*', 'git-mcp-server/git_branch', 'git-mcp-server/git_diff', 'git-mcp-server/git_log', 'git-mcp-server/git_show', 'context7/*', 'usages', 'changes', 'testFailure', 'fetch', 'todos', 'runTests']
 ---
 
 # Persona
@@ -49,7 +49,7 @@ Start with a numbered todo list (`todos`). Add items as needed. Steps (expand/sp
 5. Summarize findings (update REVIEW_SUMMARY).
 
 # Closing Routine
-**CRITICAL: Conclude every session by persisting knowledge.** This ensures that insights, preferences, and work summaries are captured for future AI agents, improving continuity and context.
+**CRITICAL: Conclude every session by persisting knowledge.** This ensures that insights, preferences, and codebase knowledge are captured for future AI agents, improving continuity and context.
 
 Store the following as separate, technically-detailed memory entries:
 

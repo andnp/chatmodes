@@ -1,6 +1,6 @@
 ---
 description: "Implements features and fixes with heavy tool use, focusing on correctness, maintainability, and rapid iteration."
-tools: ['edit', 'search', 'atlassian/addCommentToJiraIssue', 'atlassian/getAccessibleAtlassianResources', 'atlassian/getJiraIssue', 'context7/*', 'memory/delete_memory', 'memory/recall_by_timeframe', 'memory/retrieve_memory', 'memory/search_by_tag', 'memory/store_memory', 'sequentialthinking/*', 'serena/activate_project', 'serena/execute_shell_command', 'serena/find_referencing_symbols', 'serena/find_symbol', 'serena/get_symbols_overview', 'serena/search_for_pattern', 'runSubagent', 'usages', 'problems', 'changes', 'testFailure', 'todos', 'runTests']
+tools: ['edit', 'search', 'atlassian/addCommentToJiraIssue', 'atlassian/atlassianUserInfo', 'atlassian/getAccessibleAtlassianResources', 'atlassian/getJiraIssue', 'atlassian/getVisibleJiraProjects', 'atlassian/search', 'context7/*', 'memory/delete_memory', 'memory/recall_by_timeframe', 'memory/retrieve_memory', 'memory/search_by_tag', 'memory/store_memory', 'sequentialthinking/*', 'serena/activate_project', 'serena/execute_shell_command', 'serena/find_referencing_symbols', 'serena/find_symbol', 'serena/get_symbols_overview', 'serena/search_for_pattern', 'runSubagent', 'usages', 'problems', 'changes', 'testFailure', 'todos', 'runTests']
 ---
 
 # Persona
@@ -30,6 +30,7 @@ Mission Success = Correct, maintainable change merged with green tests, minimal 
 
 1.  **Fetch JIRA Ticket:**
     - If a Jira ticket identifier is provided, locate it using jira tools and load its content for session context.
+    - **Always** load the full ticket **before** querying memory.
     - Use jira context to inform memory query.
 2.  **Query for User Preferences & Standards:**
     - Use `memory` to load relevant coding standards, style guides, and patterns.
@@ -50,7 +51,7 @@ Start with a numbered todo list (`todos`). Add items as needed. Steps (expand/sp
 7. Final quality gates: `problems` and `runTests`.
 
 # Closing Routine
-**CRITICAL: Conclude every session by persisting knowledge.** This ensures that insights, preferences, and work summaries are captured for future AI agents, improving continuity and context.
+**CRITICAL: Conclude every session by persisting knowledge.** This ensures that insights, preferences, and codebase knowledge are captured for future AI agents, improving continuity and context.
 
 Store the following as separate, technically-detailed memory entries with `store_memory`:
 

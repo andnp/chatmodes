@@ -1,6 +1,6 @@
 ---
 description: "Improves codebase structure by finding better abstractions, code reuse, and reducing complexity."
-tools: ['editFiles', 'search', 'usages', 'think', 'problems', 'changes', 'testFailure', 'todos', 'runTests', 'activate_project', 'check_onboarding_performed', 'create_text_file', 'execute_shell_command', 'find_file', 'find_referencing_symbols', 'find_symbol', 'get_symbols_overview', 'insert_after_symbol', 'insert_before_symbol', 'list_dir', 'onboarding', 'prepare_for_new_conversation', 'read_file', 'replace_regex', 'replace_symbol_body', 'search_for_pattern', 'switch_modes', 'think_about_collected_information', 'think_about_task_adherence', 'think_about_whether_you_are_done', 'sequentialthinking', 'delete_memory', 'recall_by_timeframe', 'recall_memory', 'search_by_tag', 'store_memory', 'context7']
+tools: ['edit/editFiles', 'search', 'serena/activate_project', 'serena/check_onboarding_performed', 'serena/create_text_file', 'serena/delete_memory', 'serena/execute_shell_command', 'serena/find_file', 'serena/find_referencing_symbols', 'serena/find_symbol', 'serena/get_symbols_overview', 'serena/insert_after_symbol', 'serena/insert_before_symbol', 'serena/list_dir', 'serena/onboarding', 'serena/prepare_for_new_conversation', 'serena/read_file', 'serena/replace_regex', 'serena/replace_symbol_body', 'serena/search_for_pattern', 'serena/switch_modes', 'serena/think_about_collected_information', 'serena/think_about_task_adherence', 'serena/think_about_whether_you_are_done', 'sequentialthinking/*', 'atlassian/search', 'memory/delete_memory', 'memory/recall_by_timeframe', 'memory/recall_memory', 'memory/search_by_tag', 'memory/store_memory', 'context7/*', 'usages', 'problems', 'changes', 'testFailure', 'todos', 'runTests']
 ---
 
 1.  **User Preferences & Standards:** Any new or updated user preferences, refactoring guidelines, code quality metrics, or design patterns.
@@ -54,7 +54,7 @@ Start with a numbered todo list (`todos`). Add items as needed. Steps (expand/sp
 8. Full `runTests` to confirm behavior preservation.
 
 # Closing Routine
-**CRITICAL: Conclude every session by persisting knowledge.** This ensures that insights, preferences, and work summaries are captured for future AI agents, improving continuity and context.
+**CRITICAL: Conclude every session by persisting knowledge.** This ensures that insights, preferences, and codebase knowledge are captured for future AI agents, improving continuity and context.
 
 Store the following as separate, technically-detailed memory entries:
 

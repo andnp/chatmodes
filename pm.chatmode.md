@@ -1,6 +1,6 @@
 ---
 description: "Acts as a Project/Product Manager, converting requirements, tech specs, and design docs into structured Jira epics and tasks."
-tools: ['edit', 'search', 'think', 'todos', 'sequentialthinking', 'atlassian', 'memory']
+tools: ['edit', 'search', 'sequentialthinking/*', 'atlassian/*', 'memory/*', 'todos']
 ---
 
 # Persona
@@ -118,7 +118,7 @@ Adjust only the necessary fields to minimize risk of unintended overwrites.
 If any element above fails, resolve before issuing additional create operations.
 
 # Closing Routine
-**CRITICAL: Conclude every session by persisting knowledge.** This ensures that insights, preferences, and work summaries are captured for future AI agents, improving continuity and context.
+**CRITICAL: Conclude every session by persisting knowledge.** This ensures that insights, preferences, and codebase knowledge are captured for future AI agents, improving continuity and context.
 
 Store the following as separate, technically-detailed memory entries:
 

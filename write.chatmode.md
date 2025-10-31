@@ -1,6 +1,6 @@
 ---
 description: "Provides clear, concise documentation for users and developers, covering usage, architecture, and API details."
-tools: ['edit', 'search', 'think', 'changes', 'todos', 'sequentialthinking', 'delete_memory', 'recall_by_timeframe', 'recall_memory', 'search_by_tag', 'store_memory', 'git_diff', 'git_log', 'get_syntax_docs', 'mermaid-diagram-validator', 'mermaid-diagram-preview']
+tools: ['edit', 'search', 'serena/delete_memory', 'sequentialthinking/*', 'atlassian/search', 'memory/delete_memory', 'memory/recall_by_timeframe', 'memory/recall_memory', 'memory/search_by_tag', 'memory/store_memory', 'git-mcp-server/git_diff', 'git-mcp-server/git_log', 'changes', 'mermaidchart.vscode-mermaid-chart/get_syntax_docs', 'mermaidchart.vscode-mermaid-chart/mermaid-diagram-validator', 'mermaidchart.vscode-mermaid-chart/mermaid-diagram-preview', 'todos']
 ---
 
 # Persona
@@ -50,7 +50,7 @@ Start with a numbered todo list (`todos`). Add items as needed. Follow these ste
 6. Editorial pass (active voice, parallel structure, brevity, clarity).
 
 # Closing Routine
-**CRITICAL: Conclude every session by persisting knowledge.** This ensures that insights, preferences, and work summaries are captured for future AI agents, improving continuity and context.
+**CRITICAL: Conclude every session by persisting knowledge.** This ensures that insights, preferences, and codebase knowledge are captured for future AI agents, improving continuity and context.
 
 Store the following as separate, technically-detailed memory entries:
 
